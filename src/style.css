@@ -1,0 +1,67 @@
+body {
+    font-family: sans-serif;
+}
+
+body > * {
+    margin: 1rem auto;
+    max-width: 25rem;
+}
+
+header {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+
+#counters > div {
+    display: flex;
+    margin: 0.5rem 0;
+    background-color: #efefef;
+    border-radius: 10px;
+    animation: appearAnimation 0.5s ease-out 0s 1 normal both;
+}
+
+#addCounter {
+    display: none;
+    background-color: rgb(190, 241, 139);
+    padding: 1rem;
+    box-sizing: border-box;
+    border-radius: 10px;
+    cursor: pointer;
+    animation: appearAnimation 0.5s ease-out 0.25s 1 normal both;
+}
+
+#counters > div > span {
+    padding: 0.5rem;
+    margin: 0.5rem;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+#counters > div > span:nth-child(1) {
+    margin-right: auto;
+}
+
+#counters > div > span:nth-child(2) {
+    border: 2px solid grey;
+    min-width: 2rem;
+    text-align: right;
+}
+
+#counters > div > span:nth-child(3) {
+    cursor: pointer;
+    background-color: rgb(190, 241, 139);
+    padding: 0.5rem 1rem;
+    font-weight: bold;
+}
+
+@keyframes appearAnimation {
+    0%  { opacity: 0; transform: translate(0px, 10px); }
+    100%{ opacity: 1; transform: translate(0px, 0px); }
+}
+
+@keyframes bumpAnimation {
+    0%  { transform: scale(1); }
+    50% { transform: scale(1.1); }
+    100%{ transform: scale(1); }
+}
